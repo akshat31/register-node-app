@@ -5,9 +5,10 @@ var mongo = require('mongodb');
 var mongojs = require('mongojs');
 var db = mongojs('mongodb://akshat31:friend4u@ds153869.mlab.com:53869/mydb',['customers']);
 var app = express();
+var port = process.env.PORT || 3000;
 
 
-app.listen('4000' , ()=>{
+app.listen( port , ()=>{
     console.log("server started on port 4000")
 })
 
