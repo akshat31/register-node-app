@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var mongo = require('mongodb');
 var mongojs = require('mongojs');
-var db = mongojs('mongodb://akshat31:friend4u@ds153869.mlab.com:53869/mydb',['customers']);
+var db = mongojs(process.env.mydb,['customers']);
 var app = express();
 var port = process.env.PORT || 3000;
 
